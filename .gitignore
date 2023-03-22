@@ -1,0 +1,12 @@
+/.idea
+/.mvn
+/.vscode
+.angular
+
+/node_modules
+/node
+
+target
+README.adoc
+
+/target
