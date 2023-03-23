@@ -1,15 +1,20 @@
-import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import {Component, OnInit} from '@angular/core';
+import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'Demo';
-  data = {}  as any;
+export class AppComponent implements OnInit {
+  loading: boolean = true;
+
   constructor(private http: HttpClient) {
-    http.get('resource').subscribe(data => this.data = data);
+  }
+
+  ngOnInit() {
+    setTimeout(() => {
+      this.loading = false;
+    }, 3000); // Set a timeout for 3 seconds to simulate a loading time
   }
 }

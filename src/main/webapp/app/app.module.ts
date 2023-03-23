@@ -3,14 +3,18 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
+import { LoadingComponent } from './loading/loading.component';
+import {RouterModule} from "@angular/router";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
